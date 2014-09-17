@@ -55,7 +55,7 @@ body {
 </style>
 <script>
     function update() {
-        document.body.backgroundImage = document.location.hash.toLowerCase() === "#humble" ? "none" : "";
+        document.body.style.backgroundImage = document.location.hash.toLowerCase() === "#humble" ? "none" : "";
     }
     
     window.onpopstate = update
