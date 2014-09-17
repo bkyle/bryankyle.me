@@ -13,46 +13,53 @@ div {
 }
 
 body {
-	max-width: 30em;
-	margin-left: 3em;
-	margin-top: 3em;
-	margin-right: auto;
-	font-family: 'helvetica neue', sans-serif;
-	font-weight: lighter;
-	line-height: 1.4em;
-	text-align: justify;
-	
-	background-image: url(bryan_medium.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+    max-width: 30em;
+    margin-left: 3em;
+    margin-top: 3em;
+    margin-right: auto;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: lighter;
+    line-height: 1.4em;
+    text-align: justify;
+
+    background-image: url(bryan_medium.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: 300px 100%;
 }
 
 @media all and (min-height: 683px) and (min-width: 1324px) {
     body {
-    	background-position: 300px 100%;
+        background-position: 300px 100%;
     }
 }
 
 @media all and (min-height: 683px) and (max-width: 1324px) {
     body {
-    	background-position: 100% 100%;
+        background-position: 100% 100%;
     }
 }
 
 @media all and (max-height: 683px) and (min-width: 1324px) {
     body {
-	    background-position: 300px 0%;
+        background-position: 300px 0%;
     }
 }
 
 @media all and (max-height: 683px) and (max-width: 1324px) {
     body {
-	    background-position: 100% 0%;
+        background-position: 100% 0%;
     }
 }
 
 </style>
+<script>
+    function update() {
+        document.body.backgroundImage = document.location.hash.toLowerCase() === "#humble" ? "none" : "";
+    }
+    
+    window.onpopstate = update
+</script>
 </head>
 <body>
     <div>
@@ -73,5 +80,8 @@ body {
             <li>first.last at gmail dot com</li>
         </ul>
     </div>
+    <script>
+    	update();
+    </script>
 </body>
 </html>
