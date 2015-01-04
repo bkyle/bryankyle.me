@@ -7,7 +7,11 @@ h1 {
     font-family: 'trebuchet ms', sans-serif;
 }
 
-div {
+div.bio {
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: lighter;
+    line-height: 1.4em;
+    text-align: justify;
     background-color: rgba(100%, 100%, 100%, 0.5);
     padding: 1.5em;
 }
@@ -15,19 +19,28 @@ div {
 body {
     max-width: 30em;
     margin-left: 3em;
+    margin-right: 3em;
     margin-top: 3em;
-    margin-right: auto;
-    font-family: 'helvetica neue', sans-serif;
-    font-weight: lighter;
-    line-height: 1.4em;
-    text-align: justify;
 
     background-image: url(bryan_medium.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: 300px 100%;
+    background-position: 100% 100%;
+    background-size: contain;
 }
 
+body.humble {
+    max-width: 100%;
+    background-image: none;
+}
+
+@media all and (max-height: 500px) and (max-width: 500px) {
+    body {
+        background-position: 100% 100%;
+    }
+}
+
+/*
 @media all and (min-height: 683px) and (min-width: 1324px) {
     body {
         background-position: 300px 100%;
@@ -51,21 +64,28 @@ body {
         background-position: 100% 0%;
     }
 }
-
+*/
 </style>
 <script>
     function update() {
-        document.body.style.backgroundImage = document.location.hash.toLowerCase() === "#humble" ? "none" : "";
+        document.body.className = document.location.hash.toLowerCase().substring(1);
     }
     
     window.onpopstate = update
 </script>
 </head>
 <body>
-    <div>
+    <div class="bio">
         <h1>Hello</h1>
     
-        <p>Hi, my name is Bryan Kyle.  I'm a software engineer currently living in Victoria, BC, Canada.  I work on <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/discovery-advisor.html">Watson Discovery Advisor</a>.  When I'm not doing work for my jobby-job, I'm writing software and playing around with new technologies, writing on <a href="http://bryankyle.com">my blog<a>, <a href="http://www.flickr.com/photos/bryankyle/">taking pictures</a>.</p>
+        <p>Hi, my name is Bryan Kyle.  I'm a software engineer currently living
+        in Victoria, BC, Canada.  I work
+        on <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/discovery-advisor.html">Watson
+        Discovery Advisor</a>.  When I'm not doing work for my jobby-job, I'm
+        writing software and playing around with new technologies, writing
+        on <a href="http://bryankyle.com">my
+        blog<a>, <a href="http://www.flickr.com/photos/bryankyle/">taking
+        pictures</a>.</p>
     
         <ul>
             <li><a href="http://bryankyle.com">bryankyle.com</a></li>
