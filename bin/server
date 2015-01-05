@@ -16,6 +16,9 @@ case $1 in
 		$0 start
 		;;
 	refresh)
-		(cd $ABS_PATH/..; git update)
+		(cd $ABS_PATH/..; git pull)
+		;;
+	*)
+		echo "$0 (start|stop|restart|reload|refresh)"
 		;;
 esac
