@@ -1,4 +1,6 @@
-language: none
+install:
+script: 
+
 deploy:
   provider: s3
   access_key_id: AKIAINYINDPKGDJ3HJAQ
