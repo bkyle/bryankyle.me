@@ -9,15 +9,15 @@ html {
 
 body {
     max-width: 30em;
-    margin-left: 3em;
+    margin-left: auto;
     margin-right: 3em;
     margin-top: 3em;
 
     background-image: url(bryan_medium.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-size: contain;
+    background-position: -250px 100%;
+    -background-size: contain;
 
     line-height: 1.45;
     color: #333;
@@ -102,31 +102,30 @@ body.humble {
     window.onpopstate = update
 </script>
 </head>
-<body>
-    <div class="bio">
+<body vocab="http://schema.org/">
+    <div class="bio" typeOf="Person" resource="https://bryankyle.me">
         <h1>Hello</h1>
     
-        <p>Hi, my name is Bryan Kyle.  I'm a software engineer currently living
+        <p>Hi, my name is <span property="name"><span property="givenName">Bryan</span> <span property="familyName">Kyle</span></span>.  I'm a <span property="jobTitle">software engineer</span> currently living
         in Victoria, BC, Canada.  I work
         on <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/discovery-advisor.html">Watson
         Discovery Advisor</a>.  When I'm not doing work for my jobby-job, I'm
         writing software and playing around with new technologies, writing
         on <a href="http://bryankyle.com">my
-        blog<a>, and <a href="http://www.flickr.com/photos/bryankyle/">taking
+        blog</a>, and <a href="http://www.flickr.com/photos/bryankyle/">taking
         pictures</a>.</p>
     
         <ul>
-            <li><a href="http://bryankyle.com">bryankyle.com</a></li>
-            <li><a href="https://github.com/bkyle">github.com</a></li>
-            <li><a href="http://www.flickr.com/photos/bryankyle">flickr.com</a></li>
-            <li><a href="http://stackoverflow.com/users/68757/bryan-kyle">stackoverfiow.com</a></li>
-            <li><a href="http://careers.stackoverflow.com/bryankyle">careers.stackoverflow.com</a></li>
-            <li><a href="https://twitter.com/bryan_kyle">twitter</a></li>
-            <!--<li><a href="https://alpha.app.net/bryankyle">app.net</a></li>-->
-            <li><a href="http://instagram.com/bkyle">instagram</a></li>
-            <li><a href="http://ca.linkedin.com/pub/bryan-kyle/11/2a0/1b6">linkedin.com</a>
-            <li>first dot last at gmail dot com</li>
-            <li>first dot last at protonmail dot com</li>
+            <li><a property="url" href="http://bryankyle.com">bryankyle.com</a></li>
+            <li><a property="url" href="https://github.com/bkyle">github.com</a></li>
+            <li><a property="url" href="http://www.flickr.com/photos/bryankyle">flickr.com</a></li>
+            <li><a property="url" href="http://stackoverflow.com/users/68757/bryan-kyle">stackoverfiow.com</a></li>
+            <li><a property="url" href="http://careers.stackoverflow.com/bryankyle">careers.stackoverflow.com</a></li>
+            <li><a property="url" href="https://twitter.com/bryan_kyle">twitter</a></li>
+            <li><a property="url" href="http://instagram.com/bkyle">instagram</a></li>
+            <li><a property="url" href="http://ca.linkedin.com/pub/bryan-kyle/11/2a0/1b6">linkedin.com</a>
+            <li><span property="email">first dot last at gmail dot com</span></li>
+            <li><span property="email">first dot last at protonmail dot com</span></li>
         </ul>
     </div>
     <script>
