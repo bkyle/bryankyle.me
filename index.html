@@ -30,9 +30,10 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-family: 'trebuchet ms', sans-serif;
-    color: #7CC7FF;
-    
+    font-family: 'helvetica nueue', 'helvetica', 'trebuchet ms', sans-serif;
+    font-weight: thin;
+    color: #686868;
+
     margin-top: 0;
     font-size: 3.157em;
 }
@@ -50,7 +51,8 @@ p {
 }
 
 div.bio {
-    font-family: 'helvetica neue', sans-serif;
+    font-family: 'helvetica neue', 'helvetica', sans-serif;
+    font-weight: 200;
     line-height: 1.4em;
     text-align: justify;
     background-color: rgba(100%, 100%, 100%, 0.5);
@@ -98,23 +100,16 @@ body.humble {
     function update() {
         document.body.className = document.location.hash.toLowerCase().substring(1);
     }
-    
+
     window.onpopstate = update
 </script>
 </head>
 <body vocab="http://schema.org/">
     <div class="bio" typeOf="Person" resource="https://bryankyle.me">
         <h1>Hello</h1>
-    
-        <p>Hi, my name is <span property="name"><span property="givenName">Bryan</span> <span property="familyName">Kyle</span></span>.  I'm a <span property="jobTitle">software engineer</span> currently living
-        in Victoria, BC, Canada.  I work
-        on <a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/discovery-advisor.html">Watson
-        Discovery Advisor</a>.  When I'm not doing work for my jobby-job, I'm
-        writing software and playing around with new technologies, writing
-        on <a href="http://bryankyle.com">my
-        blog</a>, and <a href="http://www.flickr.com/photos/bryankyle/">taking
-        pictures</a>.</p>
-    
+
+        <p>Hi, my name is <span property="name"><span property="givenName">Bryan</span> <span property="familyName">Kyle</span></span>.  I'm a <span property="jobTitle">software engineer</span> currently living in Victoria, BC, Canada.  I currently work on building large scale cognitive data systems with a my focus being on data ingestion, enrichment, and analytics.  My passion for this work was fueled in part by my past experience as a technical leader for IBM's <a href="https://www.youtube.com/watch?v=1gU0lPMcWIs">Watson Discovery Advisor</a>.  When I'm not doing work for my jobby-job, I'm writing software and playing around with new technologies, writing on <a href="http://bryankyle.com">my blog</a>, and <a href="http://www.flickr.com/photos/bryankyle/">taking pictures</a>.</p>
+
         <ul>
             <li><a property="url" href="http://bryankyle.com">bryankyle.com</a></li>
             <li><a property="url" href="https://github.com/bkyle">github.com</a></li>
